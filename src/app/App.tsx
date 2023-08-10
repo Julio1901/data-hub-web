@@ -1,8 +1,7 @@
+import { ProjectRoutes } from "./routes";
 
 export const App = () => {
   return (
-    <div className="App">
-     Hello!
-    </div>
+    <ProjectRoutes />
   );
 }
