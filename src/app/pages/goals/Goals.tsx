@@ -13,42 +13,38 @@ export const Goals: React.FC = () => {
 
     const [goals, setGoals] = useState<IGoal[]>([]);
 
-    useEffect( () => {
+    useEffect(() => {
         const fetchData = async () => {
             const data: IGoal[] = await getGoals();
             setGoals(data);
             console.log("Get Goals Mock")
-          };
+        };
 
-          fetchData();
+        fetchData();
     }, []);
 
     return (
         <div >
-        <h1>My personal Goals</h1>
-        <ul>
-          {goals.map(goal => (
-            <li key={goal.name}
-            onClick={ () => { 
-                
-                console.log("CLICADO");
-                //console.log(goal);
-                navigate("/goal",
-                    {
-                        state: goal
-                    }
-                )
-            
-            }
+            <h1>My personal Goals</h1>
+            <ul>
+                {goals.map(goal => (
+                    <li key={goal.name}
+                        style={{padding: '5px 0'}}
+                        onClick={() => {
+                            navigate("/goal",
+                                {
+                                    state: goal
+                                }
+                            )
+                        }
+                        }
+                    >
+                        {goal.name}
 
-                
-             }  
-            >
-              {goal.name}
-            </li>
-          ))}
-        </ul>
-      </div>
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 
 };
