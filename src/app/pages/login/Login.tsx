@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Login = () => {   
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    useEffect( () => {
+        console.log("Bloco de código sendo executado!!")
+    }, []);
+
+    //Fazendo com que seja executado sempre que determinados valores sejam alterados
+    useEffect( () => {
+        console.log(email);
+        console.log(password);
+    }, [email, password]);
+
 
     const handleLogin = () => {
         console.log(email);
