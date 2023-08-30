@@ -9,6 +9,5 @@ export const InputWithRoundedBorder : React.FC<InputProps> = ({placeholder}) => 
         <>
         <S.InputDefault placeholder={placeholder}/>
         </>
-         
     )
 }
