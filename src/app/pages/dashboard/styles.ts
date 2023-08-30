@@ -22,5 +22,6 @@ export const ContainerPrincipalContent = styled.div`
   background-color: rgba(62, 153, 213, 0.2);
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
