@@ -1,5 +1,6 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
+import { LoggedUserContext } from "../../shared/contexts";
 
 export const Dashboard = () => {
 
@@ -7,9 +8,15 @@ export const Dashboard = () => {
     const counterRef = useRef({ counter: 0 });
 
 
+    //Usando contexto para pegar informações comuns a todos os componentes que estejam dentro do mesmo contexto
+    // Exemplo usando a desestruturação do objeto
+    const {userName} = useContext(LoggedUserContext);
+
     return (
         <>
             <p>Dashboard</p>
+        
+            <p>{userName}</p>
 
             <p>Contador: {counterRef.current.counter}</p>
 

@@ -1,6 +1,7 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { InputLogin } from "./components/InputLogin";
 import { ButtonLogin } from "./components/ButtonLogin";
+import { LoggedUserContext } from "../../shared/contexts";
 
 export const Login = () => {   
 
@@ -10,7 +11,8 @@ export const Login = () => {
     const [password, setPassword] = useState("");
 
     const emailLength = email.length * 1000;
-
+  //Usando contexto para pegar informações comuns a todos os componentes que estejam dentro do mesmo contexto
+  const loggedUserContext = useContext(LoggedUserContext);
 
     const handleLogin = () => {
         console.log(email);
@@ -23,6 +25,8 @@ export const Login = () => {
 
     return (
         <div>
+
+            <p>{loggedUserContext.userName}</p>
             <form>
                 <p>Quantidade de caracteres no email: {emailLength}</p>
              
