@@ -8,8 +8,10 @@ export const Dashboard = () => {
     return (
         <S.ContainerPrincipal>
 
-            <S.ContainerPrincipalContent/>
-            <Title titleContent="Data Hub "/>
+            <S.ContainerPrincipalContent>
+                <Title titleContent="Data Hub "/>
+            </S.ContainerPrincipalContent>
+            
             
             {/* Primeiro modo de fazer navegação */}
             {/* <Link to="/login">Login</Link> */}

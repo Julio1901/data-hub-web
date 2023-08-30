@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-export const DashboardTitle = styled.p `
-    font-size: 20;
+export const DashboardTitle = styled.h1 `
+    font-size: 70px;
     font-weight: bold;
+    color: white;
 `
