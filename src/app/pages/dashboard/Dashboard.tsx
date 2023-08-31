@@ -7,18 +7,8 @@ import { ButtonWithRoundedBorder } from "../../shared/components";
 
 export const Dashboard = () => {
     return (
-        <S.ContainerPrincipal>
-
-            <S.ContainerPrincipalContent>
-                <Title titleContent="Data Hub "/>
-                <InputWithRoundedBorder placeholder="youremail@gmail.com"/>
-                <InputWithRoundedBorder placeholder="password"/>
-                <ButtonWithRoundedBorder buttonText="LOG IN"/>
-            </S.ContainerPrincipalContent>
-            
-            
-            {/* Primeiro modo de fazer navegação */}
-            {/* <Link to="/login">Login</Link> */}
-        </S.ContainerPrincipal>
+      <>
+        My home page
+      </>
     );
 }

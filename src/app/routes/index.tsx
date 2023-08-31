@@ -10,7 +10,7 @@ export const ProjectRoutes = () => {
                 <Route path="/initial-page" element={<Dashboard />}/>
                 <Route path="/goals" element={<Goals />}/>
                 <Route path="/goal" element={<Goal />}/>
-                <Route path="*" element={<Navigate to="/initial-page"/>}/>
+                <Route path="*" element={<Navigate to="/login"/>}/>
             </Switch>
         </BrowserRouter>
     );

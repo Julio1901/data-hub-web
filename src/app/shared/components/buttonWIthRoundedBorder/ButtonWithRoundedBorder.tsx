@@ -2,10 +2,11 @@ import * as S from './styles'
 
 interface ButtonProps {
     buttonText: string
+    onClick: () => void
 }
 
-export const ButtonWithRoundedBorder : React.FC<ButtonProps> = ({buttonText}) => {
+export const ButtonWithRoundedBorder : React.FC<ButtonProps> = ({buttonText, onClick}) => {
     return (
-        <S.Button>{buttonText}</S.Button>
+        <S.Button onClick={onClick}>{buttonText}</S.Button>
     )
 }
